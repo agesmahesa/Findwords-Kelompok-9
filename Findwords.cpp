@@ -26,4 +26,5 @@ bool searchHorizontal(char *);
 
 int main(){
   return 0;
+  
 }
