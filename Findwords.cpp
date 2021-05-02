@@ -1,45 +1,92 @@
 #include <iostream>
 #include <cstring>
+
 using namespace std;
-const int cols = 16, rows = 15;
 
-char words[rows][cols] = {"tgbwwinterwsesn",
-                                "aaunttmmhfoodnb",
-                                "jlwcqldzmpmvdmr",
-                                "asagmquwvvbsohi",
-                                "bwplotanadtpgnc",
-                                "rewngodjcpnatnk",
-                                "eeotwosbqharrsa",
-                                "azcgeswewnaknpb",
-                                "dinnerqodlwdcar",
-                                "onopkwmparktzcc",
-                                "qbfrogmamwpweey",
-                                "lqzqnnmrzjjsclg",
-                                "mosgzczetdbooto",
-                                "pdcrzmsngrdnrpz",
+const int kolom = 16, baris = 15;
 
-                                "ohnkzwaterjgtra"}
-
-                                "ohnkzwaterjgtra"};
-
-char *getWordVertical(int);
-char *reverse(char *);
-bool searchVertical(char *);
-bool searchHorizontal(char *);
-
-
-
-int main()
-{
-    char word[16];
-    int n;
-    cin>>n;
-    for (int i=0;i<n;i++){
-        cin.getline(word,16,'\n');
-        if (searchVertical(word) || searchHorizontal(word))
-            cout << "Ada\n";
-        else 
-            cout << "Tidak Ada\n";
-    }
-    return 0;
-}
+char words[baris][kolom] = {"tgbwwinterwsesn",
+                            "aaunttmmhfoodnb",
+                            "jlwcqldzmpmvdmr",
+                            "asagmquwvvbsohi",
+                            "bwplotanadtpgnc",
+                            "rewngodjcpnatnk",
+                            "eeotwosbqharrsa",
+                            "azcgeswewnaknpb",
+                            "dinnerqodlwdcar",
+                            "onopkwmparktzcc",
+                            "qbfrogmamwpweey",
+                            "lqzqnnmrzjjsclg",
+                            "mosgzczetdbooto",
+                            "pdcrzmsngrdnrpz",
+                            "ohnkzwaterjgtra"};
+			
+int cari_kata(char *(masukkan)){
+	int panjang, kata_ketemu, cek;
+	kata_ketemu=0;
+	panjang=strlen(masukkan);
+	
+    for (int i=0; i<15; i++){
+		for (int j=0; j<15 ;j++){
+			if (masukkan[0]==words[i][j]){
+				//cari kata horizontal kanan
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i][j+n]){
+						cek=n;
+				}else{
+					break;
+				}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;
+				//cari kata horizontal kiri
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i][j-n]){
+						cek=n;
+					}else{
+						break;
+					}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;
+        //cari kata vertikal bawah
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i+n][j]){
+						cek=n;
+					}else{
+						break;
+					}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;
+    //cari kata vertikal atas
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i-n][j]){
+						cek=n;
+					}else{
+						break;
+					}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;	
+			}
+			
+		}
+	}
+        
