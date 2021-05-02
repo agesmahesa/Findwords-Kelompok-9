@@ -57,4 +57,35 @@ int cari_kata(char *(masukkan)){
 					kata_ketemu+=0;
 				}
 				cek=0;
-
+        //cari kata vertikal bawah
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i+n][j]){
+						cek=n;
+					}else{
+						break;
+					}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;
+       //cari kata vertikal atas
+				for (int n=0; n<panjang; n++){
+					if (masukkan[n]==words[i-n][j]){
+						cek=n;
+					}else{
+						break;
+					}
+				}
+				if (cek==panjang-1){
+					kata_ketemu+=1;
+				}else{
+					kata_ketemu+=0;
+				}
+				cek=0;	
+			}
+			
+		}
+	}
