@@ -6,20 +6,20 @@ using namespace std;
 const int kolom = 16, baris = 15;
 
 char words[baris][kolom] = {"tgbwwinterwsesn",
-	                    "aaunttmmhfoodnb",
+                            "aaunttmmhfoodnb",
                             "jlwcqldzmpmvdmr",
                             "asagmquwvvbsohi",
-			    "bwplotanadtpgnc",
-			    "rewngodjcpnatnk",
-			    "eeotwosbqharrsa",
-			    "azcgeswewnaknpb",
-			    "dinnerqodlwdcar",
-			    "onopkwmparktzcc",
-			    "qbfrogmamwpweey",
-			    "lqzqnnmrzjjsclg",
-			    "mosgzczetdbooto",
-			    "pdcrzmsngrdnrpz",
-			    "ohnkzwaterjgtra"};
+                            "bwplotanadtpgnc",
+                            "rewngodjcpnatnk",
+                            "eeotwosbqharrsa",
+                            "azcgeswewnaknpb",
+                            "dinnerqodlwdcar",
+                            "onopkwmparktzcc",
+                            "qbfrogmamwpweey",
+                            "lqzqnnmrzjjsclg",
+                            "mosgzczetdbooto",
+                            "pdcrzmsngrdnrpz",
+                            "ohnkzwaterjgtra"};
 			
 int cari_kata(char *(masukkan)){
 	int panjang, kata_ketemu, cek;
@@ -58,20 +58,3 @@ int cari_kata(char *(masukkan)){
 				}
 				cek=0;
 
-
-
-
-int main()
-{
-    char word[16];
-    int n;
-    cin>>n;
-    for (int i=0;i<n;i++){
-        cin.getline(word,16,'\n');
-        if (searchVertical(word) || searchHorizontal(word))
-            cout << "Ada\n";
-        else 
-            cout << "Tidak Ada\n";
-    }
-    return 0;
-}
