@@ -90,3 +90,4 @@ int cari_kata(char *(masukkan)){
 			
 		}
 	}
+	
