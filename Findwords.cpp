@@ -17,13 +17,29 @@ char words[rows][cols] = {"tgbwwinterwsesn",
                                 "lqzqnnmrzjjsclg",
                                 "mosgzczetdbooto",
                                 "pdcrzmsngrdnrpz",
+
+                                "ohnkzwaterjgtra"}
+
                                 "ohnkzwaterjgtra"};
+
 char *getWordVertical(int);
 char *reverse(char *);
 bool searchVertical(char *);
 bool searchHorizontal(char *);
 
 
-int main(){
-  return 0;
+
+int main()
+{
+    char word[16];
+    int n;
+    cin>>n;
+    for (int i=0;i<n;i++){
+        cin.getline(word,16,'\n');
+        if (searchVertical(word) || searchHorizontal(word))
+            cout << "Ada\n";
+        else 
+            cout << "Tidak Ada\n";
+    }
+    return 0;
 }
