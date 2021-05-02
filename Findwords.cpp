@@ -17,9 +17,6 @@ char words[rows][cols] = {"tgbwwinterwsesn",
                                 "lqzqnnmrzjjsclg",
                                 "mosgzczetdbooto",
                                 "pdcrzmsngrdnrpz",
-
-                                "ohnkzwaterjgtra"}
-
                                 "ohnkzwaterjgtra"};
 
 char *getWordVertical(int);
