@@ -17,11 +17,16 @@ char words[rows][cols] = {"tgbwwinterwsesn",
                                 "lqzqnnmrzjjsclg",
                                 "mosgzczetdbooto",
                                 "pdcrzmsngrdnrpz",
+
                                 "ohnkzwaterjgtra"}
+
+                                "ohnkzwaterjgtra"};
+
 char *getWordVertical(int);
 char *reverse(char *);
 bool searchVertical(char *);
 bool searchHorizontal(char *);
+
 
 
 int main()
