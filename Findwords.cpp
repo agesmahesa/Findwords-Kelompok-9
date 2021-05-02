@@ -58,7 +58,7 @@ int cari_kata(char *(masukkan)){
 				}
 				cek=0;
 
-//cari kata vertikal bawah
+				//cari kata vertikal bawah
 				for (int n=0; n<panjang; n++){
 					if (masukkan[n]==words[i+n][j]){
 						cek=n;
