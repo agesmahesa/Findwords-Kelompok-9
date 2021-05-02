@@ -5,7 +5,7 @@ using namespace std;
 const int kolom = 16, baris = 15;
 
 char words[baris][kolom] = {"tgbwwinterwsesn",
-                        	"aaunttmmhfoodnb",
+                            "aaunttmmhfoodnb",
                             "jlwcqldzmpmvdmr",
                             "asagmquwvvbsohi",
                             "bwplotanadtpgnc",
@@ -25,11 +25,8 @@ char *reverse(char *);
 bool searchVertical(char *);
 bool searchHorizontal(char *);
 
-
-
-
 int main(){
-	system("color 64");
+    system("color 64");
     char word[16];
     int n;
     cin>>n;
