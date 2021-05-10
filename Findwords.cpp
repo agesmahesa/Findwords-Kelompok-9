@@ -55,6 +55,7 @@ bool searchHorizontal(char *cari_kata){
 			return true;
 	}
 	return false;
+
 }
 
 //fungsi utama
@@ -74,4 +75,5 @@ int main(){
             cout << "Tidak Ada\n";
     }
     return 0;
+
 }
