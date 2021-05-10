@@ -33,6 +33,7 @@ char *getWordVertical(int dapat){
 	return cekVertikal;
 }
 
+
 char *reverse(char *masukkan){
 	char *cek1, *cek2;
 	if(! masukkan || ! *masukkan)	
