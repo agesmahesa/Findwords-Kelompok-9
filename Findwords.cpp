@@ -55,4 +55,25 @@ bool searchHorizontal(char *cari_kata){
 			return true;
 	}
 	return false;
+
+}
+
+//fungsi utama
+int main(){
+	
+    char word[16];
+    int x;
+    cin >> x;
+	cin.ignore();
+	
+	for (int i=0; i<x; i++){
+        cin.getline(word, 16,'\n');
+        
+        if (searchVertical(word) || searchHorizontal(word))
+            cout << "Ada\n";
+        else 
+            cout << "Tidak Ada\n";
+    }
+    return 0;
+
 }
