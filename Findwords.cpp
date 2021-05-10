@@ -58,6 +58,18 @@ bool searchHorizontal(char *cari_kata){
 
 }
 
+//mencari kata vertikal
+bool searchVertical(char *cari_kata){
+	for(int i=0; i<=15; i++)
+		if(strstr(getWordVertical(i), cari_kata) != NULL)
+			return true;
+			
+	for(int i=0; i<=15; i++)
+		if(strstr(reverse(getWordVertical(i)), cari_kata) != NULL)
+			return true;
+	return false;
+}
+
 //fungsi utama
 int main(){
 	
@@ -75,5 +87,4 @@ int main(){
             cout << "Tidak Ada\n";
     }
     return 0;
-
 }
