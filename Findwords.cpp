@@ -87,5 +87,4 @@ int main(){
             cout << "Tidak Ada\n";
     }
     return 0;
-
 }
