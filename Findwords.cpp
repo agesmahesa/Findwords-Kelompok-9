@@ -2,6 +2,7 @@
 #include <cstring>
 
 using namespace std;
+
 const int kolom = 16, baris = 15;
 
 char words[baris][kolom] = {"tgbwwinterwsesn",
