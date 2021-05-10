@@ -32,6 +32,18 @@ char *getWordVertical(int dapat){
 		cekVertikal[i] = words[i][dapat];
 	return cekVertikal;
 }
+
+char *reverse(char *masukkan){
+	char *cek1, *cek2;
+	if(! masukkan || ! *masukkan)	
+	for (cek1=masukkan, cek2=masukkan+strlen(masukkan)-1; cek2>cek1; ++cek1, --cek2){
+        *cek1 ^= *cek2;
+        *cek2 ^= *cek1;
+        *cek1 ^= *cek2;
+	}
+	return masukkan;
+}
+
 //cari kata horizontal
 bool searchHorizontal(char *cari_kata){
 	for(int i=0; i<=15; i++)
@@ -43,16 +55,4 @@ bool searchHorizontal(char *cari_kata){
 			return true;
 	}
 	return false;
-}
-
-
-char *reverse(char *masukkan){
-	char *cek1, *cek2;
-	if(! masukkan || ! *masukkan)	
-	for (cek1=masukkan, cek2=masukkan+strlen(masukkan)-1; cek2>cek1; ++cek1, --cek2){
-        *cek1 ^= *cek2;
-        *cek2 ^= *cek1;
-        *cek1 ^= *cek2;
-	}
-	return masukkan;
 }
